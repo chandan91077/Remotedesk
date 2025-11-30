@@ -1,0 +1,130 @@
+{
+  "identity": {
+    "name": "RemoteDesk Pro",
+    "persona": "E1: The Anti-AI Designer",
+    "archetype": "Electric & Swiss Hybrid",
+    "tone": "Precision, Control, Speed, Security",
+    "vibe": "The cockpit of a stealth jet. Not a toy. A tool for professionals."
+  },
+  "typography": {
+    "headings": {
+      "family": "Space Grotesk, sans-serif",
+      "weights": ["600", "700"],
+      "usage": "Landing page headers, Dashboard section titles",
+      "letterSpacing": "-0.03em"
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "General UI text, documentation"
+    },
+    "mono": {
+      "family": "JetBrains Mono, monospace",
+      "weights": ["400"],
+      "usage": "IP addresses, Device IDs, Logs, Terminal outputs"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "light": "#000000",
+        "dark": "#FFFFFF",
+        "description": "Stark contrast. No soft grays for primary actions."
+      },
+      "background": {
+        "light": "#F4F4F5",
+        "dark": "#09090B",
+        "description": "Zinc-950 for dark mode. Not pure black, but close."
+      },
+      "accent": {
+        "hex": "#CCFF00",
+        "name": "Acid Lime",
+        "usage": "Primary CTAs, Active Status indicators, 'Online' badges. CUTS through the dark.",
+        "forbidden_alternatives": ["#1B93A4", "#7351B7"]
+      },
+      "surface": {
+        "light": "#FFFFFF",
+        "dark": "#18181B",
+        "description": "Cards and panels. Zinc-900."
+      },
+      "destructive": {
+        "hex": "#FF3333",
+        "name": "Signal Red"
+      }
+    },
+    "gradients": {
+      "landing_hero": "radial-gradient(circle at 50% 0%, rgba(204, 255, 0, 0.15) 0%, transparent 50%)",
+      "dashboard_glow": "conic-gradient(from 90deg at 50% 50%, #00000000 50%, #CCFF00 100%)"
+    }
+  },
+  "layout_strategy": {
+    "landing_page": {
+      "grid": "Mode A: The Tetris Grid",
+      "spacing": "Generous (p-24+ for sections)",
+      "alignment": "Asymmetrical. Do not center text blocks. Align left with massive negative space on right.",
+      "features": [
+        "Sticky scroll sections",
+        "Horizontal scroll for 'Features'",
+        "Oversized typography (text-7xl+)"
+      ]
+    },
+    "dashboard": {
+      "grid": "Mode B: The Control Room",
+      "density": "High. Use gap-4.",
+      "container": "Fluid width, max-w-[1920px].",
+      "sidebar": "Collapsible, icon-only mode support."
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Sharp edges (rounded-sm or rounded-none). Uppercase label. Tracking-widest.",
+      "hover": "Invert colors. Black bg -> Acid Lime bg."
+    },
+    "cards": {
+      "style": "Flat. 1px border. No shadow in dark mode. Subtle shadow-sm in light mode.",
+      "border": "border-zinc-800 (Dark) / border-zinc-200 (Light)"
+    },
+    "inputs": {
+      "style": "Underlined only OR solid background (zinc-900) with no border until focus.",
+      "focus": "Ring-2 ring-lime-400 ring-offset-0"
+    },
+    "status_indicators": {
+      "online": "w-2 h-2 rounded-full bg-[#CCFF00] shadow-[0_0_8px_#CCFF00]",
+      "offline": "w-2 h-2 rounded-full bg-zinc-600",
+      "busy": "w-2 h-2 rounded-full bg-orange-500"
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Add subtle noise overlay (opacity 0.03) to the dark background to prevent banding and add tactility.",
+    "tracing_beam": "Use on the 'Active Session' card. A glowing lime line moving around the border.",
+    "glassmorphism": "Use ONLY for the floating 'Remote Control Toolbar' overlay during a session. Backdrop-blur-xl, border-white/10."
+  },
+  "media": {
+    "image_urls": {
+      "hero_background": "https://images.unsplash.com/photo-1675044794023-2c70962f4899",
+      "server_abstract": "https://images.unsplash.com/photo-1642959314489-2495ae07023c",
+      "professional_user": "https://images.unsplash.com/photo-1758598304540-1ac6fd7d477b",
+      "network_grid": "https://images.unsplash.com/photo-1564954383507-17c1273170e4"
+    },
+    "icons": "Phosphor Icons (Regular weight for UI, Duotone for Empty States)"
+  },
+  "motion": {
+    "page_transition": "Slide up (y: 20 -> 0, opacity: 0 -> 1)",
+    "hover_effects": "Instant color swap (duration-100). No sluggish fades.",
+    "scroll": "Lenis smooth scroll is MANDATORY for the landing page."
+  },
+  "accessibility": {
+    "contrast": "Ensure Acid Lime text is ONLY used on Black backgrounds. Never on White.",
+    "focus_states": "High visibility lime ring.",
+    "reduced_motion": "Disable parallax and tracing beams if requested."
+  },
+  "universal_guidelines": [
+    "Do not use gradients for text.",
+    "Do not use 'Inter' for headings.",
+    "Do not center-align the main dashboard container.",
+    "Use 'data-testid' on all interactive elements.",
+    "Use 'sonner' for toasts.",
+    "Use 'lucide-react' or 'phosphor-icons' for icons."
+  ],
+  "instructions_to_main_agent": "You are building a tool for pros. It should feel fast, dangerous, and precise. Avoid 'friendly' rounded corners (use rounded-md max). Use the Acid Lime accent sparingly but effectively to guide the eye to the most important action (e.g., 'Connect'). The Dashboard is a HUD, not a blog."
+}
